@@ -4,11 +4,11 @@ import fs from 'fs';
 import process from 'process';
 import path from 'path';
 
-const readFile = (filename) => fs.readFileSync(path.resolve(process.cwd(), path.join('./src', filename)));
+const readFile = (filename) => fs.readFileSync(path.resolve(process.cwd(), path.join('./src', filename.trim())));
 
-const genDiff = (file1, file2) => {
-  const firstObject = readFile(file1);
-  const secondObject = readFile(file2);
+const genDiff = (filepath1, filepath2) => {
+  const firstObject = readFile(filepath1);
+  const secondObject = readFile(filepath2);
   const data1 = JSON.parse(firstObject);
   const data2 = JSON.parse(secondObject);
   const firstObjectKeys = Object.keys(data1);
