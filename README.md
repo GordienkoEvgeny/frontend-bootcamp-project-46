@@ -1,3 +1,10 @@
+### badgets
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2c0c199164cab3a5881d/test_coverage)](https://codeclimate.com/github/GordienkoEvgeny/js-starter-project-44/test_coverage)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/2c0c199164cab3a5881d/maintainability)](https://codeclimate.com/github/GordienkoEvgeny/js-starter-project-44/maintainability)
+
+[![Node CI](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/actions/workflows/nodejs.yml/badge.svg)](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/actions/workflows/nodejs.yml)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/workflows/hexlet-check/badge.svg)](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/actions)
 ### Asciinema (step 3)
