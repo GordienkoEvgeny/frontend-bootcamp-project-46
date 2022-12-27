@@ -1,6 +1,6 @@
 
-install: install-deps
-	npx simple-git-hooks
+install: 
+	npm i
 
 run:
 	bin/nodejs-package.js 10
