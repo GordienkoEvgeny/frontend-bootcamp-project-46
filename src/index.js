@@ -3,14 +3,19 @@
 import fs from 'fs';
 import process from 'process';
 import path from 'path';
+// eslint-disable-next-line import/extensions
+import parser from './parsers.js';
 
-const readFile = (filename) => fs.readFileSync(path.resolve(process.cwd(), path.join('./src', filename.trim())));
+export const readFile = (filename) => fs.readFileSync(path.resolve(process.cwd(), path.join('./__fixtures__', filename.trim())), 'utf-8');
+const getFormat = (filename) => path.extname(filename);
 
-const genDiff = (filepath1, filepath2) => {
+export const genDiff = (filepath1, filepath2) => {
+  const firstFileFormat = getFormat(filepath1);
+  const secondFileFormat = getFormat(filepath2);
   const firstObject = readFile(filepath1);
   const secondObject = readFile(filepath2);
-  const data1 = JSON.parse(firstObject);
-  const data2 = JSON.parse(secondObject);
+  const data1 = parser(firstFileFormat, firstObject);
+  const data2 = parser(secondFileFormat, secondObject);
   const firstObjectKeys = Object.keys(data1);
   const secondObjectKeys = Object.keys(data2);
   const unionObjects = { ...data1, ...data2 };
@@ -33,4 +38,3 @@ const genDiff = (filepath1, filepath2) => {
   const toString = JSON.stringify(result, null, '   ');
   return toString.replace(/["']/g, '');
 };
-export default genDiff;

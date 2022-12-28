@@ -1,11 +1,11 @@
 import { test, expect } from '@jest/globals';
-import fs from 'fs';
-import process from 'process';
-import path from 'path';
-import genDiff from '../src/index';
+import { genDiff, readFile } from '../src/index';
 
-const readFile = (filename) => fs.readFileSync(path.resolve(process.cwd(), path.join('./__fixtures__', filename.trim())), 'utf-8');
 const result = readFile('resultStep3.txt');
-test('genDiff', () => {
+test('genDiff, files.json', () => {
   expect(genDiff('file1.json', ' file2.json')).toEqual(result);
+});
+
+test('genDiff, files.yml', () => {
+  expect(genDiff('file1.yml', ' file2.yml')).toEqual(result);
 });
