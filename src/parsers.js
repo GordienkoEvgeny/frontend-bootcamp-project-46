@@ -6,6 +6,6 @@ const parser = (format, data) => {
   } if (format === '.yml' || format === '.yaml') {
     return yaml.load(data);
   }
-  return (`Формат ${format} не поддерживается.`);
+  throw new Error(`Формат не поддерживается: ${format}`);
 };
 export default parser;

@@ -7,6 +7,8 @@
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/workflows/hexlet-check/badge.svg)](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/actions)
+### Asciinema (step 6)
+https://asciinema.org/a/g5kDopa2tbLc1VONqTCrnZp10
 ### Asciinema (step 5)
 https://asciinema.org/a/PeDmZSfjxr83QpAQL43QPM7Ph
 ### Asciinema (step 3)
