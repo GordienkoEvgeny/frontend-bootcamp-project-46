@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 import { Command } from 'commander/esm.mjs'; // eslint-disable-line
-import  genDiff  from '../src/index.js'; // eslint-disable-line
+import genDiff from '../src/index.js';
 
 const program = new Command();
 

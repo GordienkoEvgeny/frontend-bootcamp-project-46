@@ -2,26 +2,12 @@
 /* eslint-disable no-console */
 import fs from 'fs';
 import path from 'path';
-// eslint-disable-next-line import/extensions
-import stylish from './formatters/stylish.js';
-// eslint-disable-next-line import/extensions
 import parse from './parsers.js';
-// eslint-disable-next-line import/extensions
 import buildTree from './buildTree.js';
+import checkFormat from './formatters/index2.js';
 
 export const readFile = (filename) => fs.readFileSync(path.resolve(process.cwd(), path.join('./__fixtures__', filename.trim())), 'utf-8');
 const getFormat = (filename) => path.extname(filename);
-
-const formatCheck = (innerTree, format) => {
-  switch (format) {
-    case 'stylish':
-      return stylish(innerTree);
-    case 'json':
-      return JSON.stringify(innerTree);
-    default:
-      throw new Error(`Формат не поддерживается: ${format}`);
-  }
-};
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const firstFileFormat = getFormat(filepath1);
@@ -31,6 +17,6 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const data1 = parse(firstFileFormat, firstObject);
   const data2 = parse(secondFileFormat, secondObject);
   const innerTree = buildTree(data1, data2);
-  return formatCheck(innerTree, formatName);
+  return checkFormat(innerTree, formatName);
 };
 export default genDiff;
