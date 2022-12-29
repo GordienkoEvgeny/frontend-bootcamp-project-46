@@ -12,5 +12,5 @@ rules:
   - ignorePackages
   - js: always
 no-underscore-dangle: [2, {
-  'allow': ['__filename__', '__dirname__']
+  'allow': ['__filename', '__dirname']
 }]
