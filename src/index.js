@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import parse from './parsers.js';
 import buildTree from './buildTree.js';
-import checkFormat from './formatters/index2.js';
+import checkFormat from './formatters/index.js';
 
 export const readFile = (filename) => fs.readFileSync(path.resolve(process.cwd(), path.join('./__fixtures__', filename.trim())), 'utf-8');
 const getFormat = (filename) => path.extname(filename);

@@ -3,8 +3,11 @@ import genDiff, { readFile } from '../src/index.js';
 
 const result = readFile('resultStylish.txt');
 const resultPlain = readFile('resultPlain.txt');
-test('genDiff, files.json', () => {
-  expect(genDiff('file1.json', ' file2.json')).toEqual(result);
+
+test('json', () => {
+  const resultJSON = readFile('resultJSON.json');
+  const toEqual = genDiff('file1.json', ' file2.json', 'json');
+  expect(resultJSON).toEqual(toEqual);
 });
 
 test('genDiff, files.yml', () => {
