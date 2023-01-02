@@ -1,14 +1,10 @@
-// import _ from 'lodash';
-/* eslint-disable no-console */
-import fs from 'fs';
 import path from 'path';
 import parse from './parsers.js';
 import buildTree from './buildTree.js';
 import checkFormat from './formatters/index.js';
+import readFile from './readFile.js';
 
-const readFile = (filename) => fs.readFileSync(filename, 'utf-8');
 const getFormat = (filename) => path.extname(filename);
-
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const firstFileFormat = getFormat(filepath1);
   const secondFileFormat = getFormat(filepath2);

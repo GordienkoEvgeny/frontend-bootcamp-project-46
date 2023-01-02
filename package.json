@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/workflows/hexlet-check/badge.svg)](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/actions)",
+  "description": "A program that determines the difference between two data structures.",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
