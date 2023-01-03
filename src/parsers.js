@@ -1,6 +1,6 @@
 import yaml from 'js-yaml';
 
-const parser = (format, data) => {
+const parse = (format, data) => {
   if (format === '.json') {
     return JSON.parse(data);
   } if (format === '.yml' || format === '.yaml') {
@@ -8,4 +8,4 @@ const parser = (format, data) => {
   }
   throw new Error(`Формат не поддерживается: ${format}`);
 };
-export default parser;
+export default parse;
