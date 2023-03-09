@@ -5,7 +5,7 @@
 
 [![Node CI](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/actions/workflows/nodejs.yml/badge.svg)](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/actions/workflows/nodejs.yml)
 
-### Hexlet tests and linter status:
+###  Hexlet tests and linter status:
 [![Actions Status](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/workflows/hexlet-check/badge.svg)](https://github.com/GordienkoEvgeny/frontend-bootcamp-project-46/actions)
 
 ### Asciinema (package example)
